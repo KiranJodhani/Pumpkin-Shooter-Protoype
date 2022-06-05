@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemy();
     }
 
-    void SpawnEnemy()
+  public  void SpawnEnemy()
     {
         _lastSpawned = Instantiate( _enemyPrefab, _spawnPoint.position, _spawnPoint.rotation );
     }

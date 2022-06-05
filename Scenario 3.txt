@@ -1,0 +1,25 @@
+Scenario 3:
+You’re deep in the middle of making what will surely be the greatest ARCore based 3D sticker app the world has ever seen. At the morning stand up you hear that the sound designer has made a pass updating the existing UI sound files while the art team have submitted 10 new 3D sticker prefabs bringing the total to 250! Excited to see the new changes you rush back to your desk and update. After making a new build you notice the size of the .apk has doubled in size, far too big for the changes mentioned!
+● Questions:
+○ How do you go about figuring out the cause of the increase?
+
+After you create APK there is tool to check the size of each file in "Editor Log" Check each file which are new after new update received. 
+
+○ How will you inform the team of your findings?
+
+You can compare editor log before and after update and see the difference of new files being added and as a result increased size
+
+○ What steps do you take to reduce the size?
+Well There are many approaches to reduce size
+
+1) Remove unwanted files which are not in the scene or game but still are there in editor log. This may be because while development developer added for testing and forgot to delete
+
+2)Check the resolution of images and mesh. Mostly high resolution and high polygons will cause to increase size
+
+3)Compress file which are not going to show bigger in screen. For example if Sticker is to be shown in 1/10th part of the screen the 256 should be maximum
+
+4)If you do not need much details in stickers and remove normal map , AO file from 3d texture
+
+5) If sticks is plain use material color instead and remove texture
+
+6)Check model compression option in model import setting to reduce size further

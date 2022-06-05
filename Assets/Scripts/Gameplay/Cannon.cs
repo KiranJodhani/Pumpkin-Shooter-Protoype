@@ -19,7 +19,7 @@ public class Cannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<GameSession>().OnSessionEnd += () => { enabled = false; };
+        //FindObjectOfType<GameSession>().OnSessionEnd += () => { enabled = false; };
     }
 
     // Update is called once per frame

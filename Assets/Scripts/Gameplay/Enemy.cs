@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         float positionOffset = Mathf.Sin( Time.timeSinceLevelLoad / _verticalFrequency ) * _verticalAmplitude;
         transform.position = new Vector3( _startPosition.x, _startPosition.y + positionOffset, _startPosition.z );
+       
     }
 
     void Die()
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if( collision.gameObject.GetComponent<Cannonball>() )
         {
+            UIManager.Instance.UpdateScore();
             _rigidBody.AddForceAtPosition(collision.transform.forward, collision.GetContact(0).point, ForceMode.Impulse);
             Die();
         }
